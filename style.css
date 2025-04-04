@@ -1,0 +1,277 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    /* background-image: url(https://i.pinimg.com/736x/c4/00/4e/c4004e7f1b6e0c9dde1751456e504791.jpg); */
+    background-color:#000;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: aliceblue;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;  
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+
+.main-block {
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px 50px; 
+    font-size: 30px;
+
+}
+
+
+.about-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.about {
+    color: white;
+    width: 50%;  
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+.image {
+    width: 40%;
+    display: flex;
+    justify-content:flex-start;
+    
+
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; 
+    
+}
+#img {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.car {
+    width:30%; 
+    height: 300px; 
+    overflow: hidden;
+    border-radius: 15px; 
+    box-shadow: 0 16px 32px rgba(135, 132, 224, 0.2); 
+    position: relative; 
+   
+
+}
+
+.car1 img, .car2 img, .car3 img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    object-position: center; 
+    transition: transform 0.3s ease;
+}
+.car1:hover img,
+.car2:hover img,
+.car3:hover img {
+    transform: scale(1.5);
+}
+.car-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(13, 3, 67, 0.804);
+}
+p{
+    color: aliceblue;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 20px;
+}
+@media (max-width: 768px) {
+    .main-block {
+        font-size: 50px;
+        padding: 200px 20px 30px;
+    }
+    .car {
+        width: 100%;
+    }
+
+    .image img {
+        max-width: 100%;
+    }
+    
+    
+    .about-section {
+        flex-direction:column;
+        text-align: left;
+    }
+    nav {
+        flex-direction:row;
+        gap: 40px;
+    }
+    header {
+        flex-direction:column;
+        text-align: left;
+    }
+    
+}
+@media (max-width: 1440px) { 
+    .main-block {
+        font-size: 26px;
+        padding: 100px 20px 40px;
+    }
+
+    .about {
+        width: 60%;
+        font-size: 18px;
+    }
+
+    .image {
+        width: 35%;
+    }
+
+    .car {
+        width: 32%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1280px) { 
+    .main-block {
+        font-size: 30px;
+        padding: 120px 20px 30px;
+    }
+
+    .about {
+        width: 70%;
+        font-size: 30px;
+    }
+
+    .image {
+        width: 70%;
+    }
+
+    .car {
+        width: 30%;
+        height: 300px;
+    }
+
+    nav {
+        gap: 30px;
+    }
+}
+@media only screen 
+  and (max-device-width: 768px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    body {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .main-block {
+        font-size: 24px;
+        padding: 120px 10px 20px;
+    }
+
+    nav {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .about {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .car {
+        width: 100%;
+        height: 200px;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+}
